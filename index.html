@@ -180,6 +180,14 @@
         var pdftex = new PDFTeX();
         pdftex.set_TOTAL_MEMORY(80*1024*1024).then(function() {
           pdftex.FS_createLazyFile('/', 'snowden.jpg', 'snowden.jpg', true, true);
+          pdftex.FS_createLazyFile('/', 'test.bib', 'test.bib', true, true);
+pdftex.FS_createLazyFile('/', 'etoolbox.sty', 'etoolbox.sty', true, true);
+    pdftex.FS_createLazyFile('/', 'logreq.sty', 'logreq.sty', true, true);
+    pdftex.FS_createLazyFile('/', 'logreq.def', 'logreq.def', true, true);
+    pdftex.FS_createLazyFile('/', 'xstring.sty', 'xstring.sty', true, true);
+    pdftex.FS_createLazyFile('/', 'xstring.tex', 'xstring.tex', true, true);
+pdftex.FS_createLazyFile('/', 'luainputenc.sty', 'luainputenc.sty', true, true);
+
 
           pdftex.on_stdout = appendOutput;
           pdftex.on_stderr = appendOutput;
